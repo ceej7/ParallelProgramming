@@ -9,18 +9,18 @@ To fork and join Pthread.
 int pthread_create(pthread_t *tidp, const pthread_attr_t *attr,              
 		   void * (*fun)(void *), void *arg);
 ```
-thread_id  is the thread id or handle (used to halt, etc.) 
-thread_attribute various attributes-standard default values obtained by passing a NULL pointer
-thread_fun the function to be run (takes and returns void*)
-fun_arg an argument can be passed to thread_fun when it starts
-return errorcode will be set to nonzero if the create operation fails
+thread_id  is the thread id or handle (used to halt, etc.).   
+thread_attribute various attributes-standard default values obtained by passing a NULL pointer.  
+thread_fun the function to be run (takes and returns void*).  
+fun_arg an argument can be passed to thread_fun when it starts.  
+return errorcode will be set to nonzero if the create operation fails.  
 
 ```C
 int pthread_join(pthread_t thread, void **value_ptr)
 ```
-The second parameter allows the exiting thread to pass information
-back to the calling thread (often NULL).
-Returns nonzero if there is an error
+The second parameter allows the exiting thread to pass information.  
+back to the calling thread (often NULL).  
+Returns nonzero if there is an error.  
 
 ### Compile
 ```bash
